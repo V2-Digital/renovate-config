@@ -24,26 +24,15 @@
   },
   "packageRules": [
     {
-      "managers": ["buildkite"],
+      "managers": ["buildkite", "github-actions"],
       "extends": [":semanticCommitTypeAll(ci)"]
     },
     {
-      "managers": ["buildkite"],
-      "updateTypes": ["minor"],
-      "automerge": true,
-      "automergeType": "branch"
-    },
-    {
-      "managers": ["composer"],
-      "depTypeList": "require-dev",
-      "extends": [":semanticCommitTypeAll(ci)"]
-    },
-    {
-      "managers": ["dockerfile"],
+      "managers": ["dockerfile", "docker-compose", "terraform"],
       "extends": [":semanticCommitTypeAll(build)"]
     },
     {
-      "managers": ["gomod"],
+      "managers": ["gomod", "npm"],
       "extends": [":semanticCommitTypeAll(fix)"]
     },
     {
@@ -52,7 +41,7 @@
       "extends": [":semanticCommitTypeAll(build)"]
     },
     {
-      "managers": ["npm"],
+      "managers": ["npm", "gomod"],
       "updateTypes": ["pin"],
       "extends": [":semanticCommitTypeAll(build)"]
     }
