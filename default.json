@@ -54,8 +54,5 @@
     "automerge": true,
     "automergeType": "branch"
   },
-  "reviewersFromCodeOwners": true,
-  "vulnerabilityAlerts": {
-    "labels": ["security"]
-  }
+  "reviewersFromCodeOwners": true
 }
